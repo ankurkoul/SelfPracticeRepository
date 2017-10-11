@@ -1,0 +1,2 @@
+# SelfPracticeRepository
+project for self
