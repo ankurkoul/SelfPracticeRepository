@@ -1,0 +1,304 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<title>Mid Night FoodKhana</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+ <link rel="stylesheet" type="text/css" href="resources/css/bootstrap2.css"/>
+<link rel="stylesheet" type="text/css"
+	href="resources/css/font-awesome.min.css" />
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<link rel="stylesheet" type="text/css"
+	href="resources/css/bootstrap/dist/css/bootstrap.css" />
+
+
+
+<style>
+.carousel-inner>.item>img,.carousel-inner>.item>a>img {
+	width: 40%;
+	height: 205px;
+	margin: auto;
+}
+
+carousel {
+	width: 640px;
+	height: 360px;
+}
+</style>
+</head>
+<script type="text/javascript" language="javascript">
+    window.history.forward(1);
+</script>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+        /*VANILLA JAVASCRIPT*/
+        var element = document.getElementById("page-loading");
+        element.parentNode.removeChild(element);
+        /* OR WITH jQuery*/
+        $('#page-loading')
+            .fadeOut('slow');
+    });
+    
+    
+</script>
+
+
+<body data-ng-app="foodKhanaApp">
+
+
+	<div class="container-fluid" data-ng-controller="foodKhanaController">
+		<div class="row ">
+			<div class="col-sm-2">
+				<img src="resources/images/midFoodLogo.jpg" class="img-rounded"
+					alt="midnight foodkhana" width="120%" height="100%">
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-9">
+				<div id="myCarousel" class="carousel slide " data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+						<li data-target="#myCarousel" data-slide-to="5"></li>
+						<li data-target="#myCarousel" data-slide-to="6"></li>
+						<li data-target="#myCarousel" data-slide-to="7"></li>
+						<li data-target="#myCarousel" data-slide-to="8"></li>
+						<li data-target="#myCarousel" data-slide-to="9"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="resources/images/fooditems/p1.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+
+						<div class="item">
+							<img src="resources/images/fooditems/p2.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+
+						<div class="item">
+							<img src="resources/images/fooditems/p3.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+
+						<div class="item">
+							<img src="resources/images/fooditems/p4.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+						<div class="item">
+							<img src="resources/images/fooditems/p5.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+						<div class="item">
+							<img src="resources/images/fooditems/p6.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+						<div class="item">
+							<img src="resources/images/fooditems/p7.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+						<div class="item">
+							<img src="resources/images/fooditems/p8.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+						<div class="item">
+							<img src="resources/images/fooditems/p9.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+						<div class="item">
+							<img src="resources/images/fooditems/p10.jpg" alt="Chania"
+								width="250" height="250">
+						</div>
+
+
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button"
+						data-slide="prev"> <span
+						class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a> <a class="right carousel-control" href="#myCarousel" role="button"
+						data-slide="next"> <span
+						class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid" data-ng-controller="HeaderController"
+			data-ng-init="onLoad()">
+
+			<div class="navbar-header col-sm-3">
+				<a class="navbar-brand" href="#">WELCOME {{userName}}</a>
+			</div>
+			<ul class="nav navbar-nav col-sm-9">
+				<li data-ng-class="{ active: isActive('/home')}"><a
+					href="#/home">Home <span class="glyphicon glyphicon-home"></span>
+				</a></li>
+				<!-- 				<li data-ng-class="{ active: isActive('/menu')}"><a
+					href="#/menu"> Menu <span class="glyphicon glyphicon-list-alt"></span>
+				</a>
+</li> -->
+
+
+
+
+
+				<li data-ng-class="{ active: isActive('/menu')}"><a
+					href="#/menu"> Menu <span class="glyphicon glyphicon-list-alt"></span>
+				</a></li>
+
+
+				<li data-ng-class="{ active: isActive('/foodCart')}"><a
+					href="#/foodCart">My cart <span
+						class="glyphicon glyphicon-shopping-cart"><span data-ng-if="cart.length> 0" ng-bind="cart.length" ></span></a></li>
+
+				<li data-ng-if="!adminUser"
+					data-ng-class="{ active: isActive('/myAccount') ||	isActive('/userMain')}"><a
+					data-ng-href="{{accountHref}}">My Account <span
+						class="glyphicon glyphicon-user"></span></a></li>
+				<li data-ng-if="adminUser"
+					data-ng-class="{ active: isActive('/adminMain')}"><a
+					href="#/adminMain"><span>Admin Watch <span
+							class="glyphicon glyphicon-eye-open"></span></a></li>
+
+				<li data-ng-class="{ active: isActive('/aboutUs')}"><a
+					href="#/aboutUs">About us <span
+						class="glyphicon glyphicon-cutlery"></span></a></li>
+				<li data-ng-class="{ active: isActive('/contact')}"><a
+					href="#/contact"> Contact <span
+						class="glyphicon glyphicon-phone-alt"></span></a></li>
+		
+			<li data-ng-if="userName"><a href="" data-ng-click="logOut()">
+						Sign out <span class="glyphicon glyphicon-off" data-toggle="modal"
+						data-target="#mySignOutModal"></span>
+				</a></li>
+
+				<!-- <li ><button type="button"
+						class="btn " ng-click="logOut()" d</button></li> -->
+
+
+
+			</ul>
+			<div class="modal fade" id="mySignOutModal" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Good bye Take care</h4>
+						</div>
+						<div class="modal-body">
+							<p>
+							<h3>Come soon !!</h3>
+							<h4>for many more offers</h4>
+
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</nav>
+	<div id="page-loading">
+			<img style="display: block; margin: 0 auto;"
+				src="resources/images/pageLoading.gif">
+		</div>
+	
+	<div class="container">
+		
+		<data-ng-view> </data-ng-view>
+
+	</div>
+
+
+	<div class="container">
+		<div class="text-center center-block ">
+			<p class="txt-railway">
+				<b><h4>Order on the go Tap,</h4></b> <img
+					src="resources/images/icons/add.jpg " width="10%" height="10%"><a
+					href="https://play.google.com/store/apps"> <img
+					src="resources/images/icons/googleplay.jpg " width="10%"
+					height="10%">
+
+				</a> <a href="https://itunes.apple.com/in"><img
+					src="resources/images/icons/applestore.png " width="9%" height="9%">
+				</a><br />
+			<h5>
+				<b>And all this for FREE! </b>
+			</h5>
+			</p>
+			<br />
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<a href="https://www.facebook.com"> <img
+					src="resources/images/icons/fb.png" class="img-rounded"
+					alt="midnight foodkhana" width="10%" height="10%">
+
+				</a> <a href="https://twitter.com"> <img
+					src="resources/images/icons/t.png" cclass="img-rounded"
+					alt="midnight foodkhana" width="10%" height="10%"> <a
+					href="https://plus.google.com"> <img
+						src="resources/images/icons/g.png" class="img-rounded"
+						alt="midnight foodkhana" width="10%" height="10%">
+				</a>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+
+
+
+	</div>
+
+	<script src="resources/js/angular/angular.min.js"></script>
+	<script src="resources/js/angular/angular-route.js"></script>
+	<script src="resources/js/angular/angular-resource.min.js"></script>
+	<script src="resources/js/angular/angular-cookies.min.js"></script>
+	<script src="resources/js/angular/angular-local-storage.min.js"></script>
+	<!-- 	<script src="resources/css/jquery.js"></script> -->
+	<script src="resources/css/bootstrap/js/tests/vendor/jquery.min.js"></script>
+	<script src="resources/css/bootstrap/dist/js/bootstrap.js"></script>
+
+	<script src="resources/js/foodkhana.js"></script>
+	<script src="resources/js/services/accountService.js"></script>
+	<script src="resources/js/controllers/loginController.js"></script>
+	<script src="resources/js/controllers/menuController.js"></script>
+	<script src="resources/js/controllers/userController.js"></script>
+	<script src="resources/js/controllers/adminController.js"></script>
+	<script src="resources/js/controllers/foodCartController.js"></script>
+	<script src="resources/js/controllers/paymentController.js"></script>
+
+
+	<!-- <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script> -->
+</body>
+</html>

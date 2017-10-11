@@ -1,0 +1,71 @@
+<div class="container">
+	<div data-ng-controller="UserController" ng-init="loadData()">
+		<div class="jumbotron jumbotron-sm">
+
+			<div class="row">
+				<div class="col-sm-12 col-lg-12">
+					<h1 class="h1" style="    background-color: antiquewhite;font-family: fantasy;">
+
+						Hunger Passbook <small
+							style="font-family: serif; font-style: italic;"><br/>Name	:{{user.userName}}
+							<br />Email		:{{user.email}}
+						</small>
+					</h1>
+				</div>
+				<!-- 	{{order}} -->
+			</div>
+		</div>
+
+		<div>
+
+
+
+			<table class="table table-hover">
+				<thead style="background-color: lightslategrey;">
+
+					<tr>
+						<th><h3 style="font-family: fantasy;">S.NO</h3></th>
+						<th><h3 style="font-family: fantasy;">Order date</h3></th>
+						<th><h3 style="font-family: fantasy;">Product order</h3></th>
+					</tr>
+				</thead>
+				<!-- 	{{userOrder}} -->
+
+
+
+				<tbody style="background-color: aliceblue;">
+					<tr ng-repeat="o in userOrder track by $index">
+						<td>{{$index + 1}}</td>
+						<td>{{o.orderOn| date:'MM/dd/yyyy'}}</td>
+						<td><table class="table table-hover">
+
+								<thead>
+
+
+									<td>inovice No</td>
+									<td>price</td>
+									<td>categoryName</td>
+									<td>vendor Name</td>
+								</thead>
+
+								<tr ng-repeat="p in o.productList">
+									<td>{{o.id}}</td>
+									<td>{{p.price}}</td>
+									<td>{{p.categoryName}}</td>
+									<td>{{p.vendor.vendorName}}</td>
+								</tr>
+
+
+							</table></td>
+
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+
+</div>

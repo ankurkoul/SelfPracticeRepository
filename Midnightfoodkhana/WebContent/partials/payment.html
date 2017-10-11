@@ -1,0 +1,153 @@
+<div class="container" style="background-color: #9b9ea3"
+	ng-init="onLoad()" data-ng-controller="PaymentController">
+<div ng-if="cart.length==0||cart===null ||cart===undefined">
+			<a href="#/menu"
+				class="btn btn-warning" style="text-align: center;"><img src="resources/images/cart_empty.gif" width="100%" height="100%"><span class="btn btn-large btn-warning">Lets Order
+				Something</span> <img src="resources/images/paid.jpg"width="20%" height="20%"> </a>
+
+		</div>
+
+	<div class="container">
+		
+		<div class="col-sm-2" ng-if="cart.length>0">
+			<img alt="credit" src="resources/images/card.jpg">
+		</div>
+		<div class="col-sm-8" style="background-color: #dcdfe5"
+			ng-if="cart.length>0">
+			<form class="form" name="myForm">
+				<div id="legend">
+					<legend class="">
+						Payment <img style="text-align: right"
+							src="resources/images/sim.jpg">
+					</legend>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="control-group">
+							<label class="control-label" for="username">Card Holder's
+								Name</label>
+							<div class="controls">
+								<input type="text" id="username" name="payment.username" placeholder="card holder name" ng-model="payment.name"
+								onkeyup="this.value=this.value.replace(/[0-9]/g,'')"	
+									pattern="[0-9]{30}"
+								class="input-xlarge" required="required">
+							</div>
+						</div>
+						<h1>{{myForm.payment.name.$valid}}</h1>
+						<!-- Card Number -->
+						<div class="control-group">
+							Card Number
+							<div class="controls">
+								<input type="text" id="cardNumber" name="cardNumber"
+									placeholder="card number" class="input-xlarge"
+									ng-minlength="3"
+									ng-maxlength="14"
+									onkeyup="this.value=this.value.replace(/[^\d]/,'')"
+									pattern="[0-9]{14}"
+									ng-model="payment.number" ng-required="true">
+							
+							</div><span style="color:red" ng-show="form1.cardNumber.$error.minlength">
+							
+							<h1>{{myForm.payment.number.$valid}}</h1>
+						</div>
+						<!-- Expiry-->
+
+						<div class="control-group">
+							<label class="control-label" for="password">Card Expiry
+								Date</label>
+							<div class="controls">
+								<select class="span3" name="expiry_month" id="expiry_month" ng-model="payment.date">
+									<option></option>
+									<option selected="selected" value="01">Jan (01)</option>
+									<option value="02">Feb (02)</option>
+									<option value="03">Mar (03)</option>
+									<option value="04">Apr (04)</option>
+									<option value="05">May (05)</option>
+									<option value="06">June (06)</option>
+									<option value="07">July (07)</option>
+									<option value="08">Aug (08)</option>
+									<option value="09">Sep (09)</option>
+									<option value="10">Oct (10)</option>
+									<option value="11">Nov (11)</option>
+									<option value="12">Dec (12)</option>
+								</select> <select class="span2" name="expiry_year"  ng-model="payment.year">
+									<option selected="selected" value="13">2013</option>
+									<option value="14">2014</option>
+									<option value="15">2015</option>
+									<option value="16">2016</option>
+									<option value="17">2017</option>
+									<option value="18">2018</option>
+									<option value="19">2019</option>
+									<option value="20">2020</option>
+									<option value="21">2021</option>
+									<option value="22">2022</option>
+									<option value="23">2023</option>
+								</select>
+							</div>
+						</div>
+							
+						<div class="control-group">
+						 CVV:
+							<div class="controls">
+								<input type="password" id="cvv"
+									onkeyup="this.value=this.value.replace(/[^\d]/,'')"
+									pattern="[0-9]{3}" 
+									ng-minlength="3"
+									name="cvv"
+									ng-maxlength="3" placeholder="CVV" class="span2" ng-model="payment.cvv"
+									required="required">
+									<span style="color:red" ng-show="form1.cvv.$error.minlength">
+									
+							</div>
+						</div>
+						<!-- Save card -->
+						
+						<h1>{{myForm.payment.cvv.$valid}}</h1>
+
+						<div class="control-group">
+							<div class="col-sm-1"></div>
+							<label class="checkbox" for="save_card"> <input
+								type="checkbox" id="save_card" value="option1"> Save
+								card on file?
+							</label>
+							<button type="submit"btn btn-success" ng-click="submitform()">Pay
+								Now</button>
+						</div>
+
+					</div>
+					<div class="col-sm-6">
+						<a href="#/home"> <span ng-if="productflag"><img
+								src="resources/images/paid.jpg" width="50% " height="50%"><br>
+								click to go back</span>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="col-sm-2" style="background-color: #8da4c9"></div>
+			</form>
+		</div>
+	</div>
+
+
+	<!-- Modal -->
+	
+
+
+	<div id="loginModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+
+
+				<div class="modal-footer">
+					Login before placing order
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>

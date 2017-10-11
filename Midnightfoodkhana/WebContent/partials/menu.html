@@ -1,0 +1,394 @@
+<style>
+.price_table_container {
+	text-align: center;
+	color: #666;
+	margin-top: 35px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.price_table_heading {
+	font-size: 36px;
+	padding: 10px;
+	background: #EEE;
+}
+
+.price_table_row {
+	padding: 15px;
+	background: #FFF;
+}
+
+.cost {
+	padding: 30px;
+	font-size: 30px;
+}
+
+.cost span {
+	font-size: 15px;
+}
+
+.price_table_row:nth-of-type(even) {
+	background: #F8F8F8;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+.recommended {
+	/*USER DEFINED COLOUR*/
+	background: #FF3A3A;
+	color: #FFF;
+	/*USER DEFINED COLOUR*/
+	padding: 3px 0 3px 0;
+	margin-top: 10px;
+	text-align: center;
+	margin-bottom: -35px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.spacer {
+	width: 100%;
+	height: 50px;
+}
+
+/*Already Defined Colours*/
+/*Background*/
+.primary-bg {
+	background: #337AB7;
+	color: #FFF;
+}
+
+.success-bg {
+	background: #5CB85C;
+	color: #FFF;
+}
+
+.info-bg {
+	background: #5BC0DE;
+	color: #FFF;
+}
+
+.warning-bg {
+	background: #F0AD4E;
+	color: #FFF;
+}
+
+.danger-bg {
+	background: #D9534F;
+	color: #FFF;
+}
+
+.dark-bg {
+	background: #444;
+	color: #FFF;
+}
+
+.royal-bg {
+	background: #8E74E2;
+	color: #FFF;
+}
+
+.static-bg {
+	background: #2BB0A6;
+	color: #FFF;
+}
+
+/*Only Text Colours*/
+.primary-text {
+	background: #FFF;
+	color: #337AB7;
+}
+
+.success-text {
+	background: #FFF;
+	color: #5CB85C;
+}
+
+.info-text {
+	background: #FFF;
+	color: #5BC0DE;
+}
+
+.warning-text {
+	background: #FFF;
+	color: #F0AD4E;
+}
+
+.danger-text {
+	background: #FFF;
+	color: #D9534F;
+}
+
+.dark-text {
+	background: #FFF;
+	color: #444;
+}
+
+.royal-text {
+	background: #FFF;
+	color: #8E74E2;
+}
+
+.static-text {
+	background: #FFF;
+	color: #2BB0A6;
+}
+
+/*Additional Button styles*/
+
+/*BTN-DARK*/
+.btn-dark {
+	color: #fff;
+	background-color: #444;
+	border-color: #444;
+}
+
+.btn-dark:hover,.btn-dark:focus,.btn-dark.focus,.btn-dark:active,.btn-dark.active,.open>.dropdown-toggle.btn-dark
+	{
+	color: #fff;
+	background-color: #222;
+	border-color: #222;
+}
+
+.btn-dark:active,.btn-dark.active,.open>.dropdown-toggle.btn-dark {
+	background-image: none;
+}
+
+/*BTN-ROYAL---------*/
+.btn-royal {
+	color: #fff;
+	background-color: #8E74E2;
+	border-color: #8E74E2;
+}
+
+.btn-royal:hover,.btn-royal:focus,.btn-royal.focus,.btn-royal:active,.btn-royal.active,.open>.dropdown-toggle.btn-royal
+	{
+	color: #fff;
+	background-color: #7451E8;
+	border-color: #7451E8;
+}
+
+.btn-royal:active,.btn-royal.active,.open>.dropdown-toggle.btn-royal {
+	background-image: none;
+}
+
+/*BTN-STATIC---------*/
+.btn-static {
+	color: #fff;
+	background-color: #2BB0A6;
+	border-color: #2BB0A6;
+}
+
+.btn-static:hover,.btn-static:focus,.btn-static.focus,.btn-static:active,.btn-static.active,.open>.dropdown-toggle.btn-static
+	{
+	color: #fff;
+	background-color: #07A094;
+	border-color: #07A094;
+}
+
+.btn-static:active,.btn-static.active,.open>.dropdown-toggle.btn-static
+	{
+	background-image: none;
+}
+
+#menuBut:hover {
+	background: #fff;
+	color: #2e6c96;
+	border: 1px solid #fff;
+}
+
+.panel.panel--styled {
+	background: #F4F2F3;
+}
+
+.panelTop {
+	padding: 30px;
+}
+
+.panelBottom {
+	border-top: 1px solid #e7e7e7;
+	padding-top: 20px;
+}
+
+.btn-add-to-cart {
+	background: #FD5A5B;
+	color: #fff;
+}
+
+.btn.btn-add-to-cart.focus,.btn.btn-add-to-cart:focus,.btn.btn-add-to-cart:hover
+	{
+	color: #fff;
+	background: #FD7172;
+	outline: none;
+}
+
+.btn-add-to-cart:active {
+	background: #F9494B;
+	outline: none;
+}
+
+span.itemPrice {
+	font-size: 24px;
+	color: #FA5B58;
+}
+
+/*----------------------
+##star Rating Styles 
+----------------------*/
+.stars {
+	padding-top: 10px;
+	width: 100%;
+	display: inline-block;
+}
+
+span.glyphicon {
+	padding: 5px;
+}
+
+.glyphicon-star-empty {
+	color: #9d9d9d;
+}
+
+.glyphicon-star-empty,.glyphicon-star {
+	font-size: 18px;
+}
+
+.glyphicon-star {
+	color: #FD4;
+	transition: all .25s;
+}
+
+.glyphicon-star:hover {
+	transform: rotate(-15deg) scale(1.3);
+}
+
+[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak
+	{
+	display: none !important;
+}
+</style>
+
+
+<div class="container view" data-ng-init="loadCategories()"
+	data-ng-controller="MenuController" style="background: #010101"
+	data-ng-cloak>
+	<div ng-if="categories.length>0">
+		<div class="row">
+			<div id="menu" class="col-md-3 col-sm-6 col-xs-12 float-shadow "
+				data-ng-repeat="cat in categories">
+				<div class="price_table_container hover-effect ">
+					<div class="price_table_heading">{{cat.categoryName|
+						uppercase}}</div>
+					<div class="price_table_body">
+						<div class="price_table_row cost warning-bg">
+							<strong><h6>{{cat.description}}</h6></strong>
+						</div>
+						<div class="price_table_row">
+							<img
+								data-ng-src="resources/images/category/{{cat.categoryName}}.jpg"
+								class="img-responsive">
+						</div>
+
+					</div>
+					<button data-ng-click="selectedCart(cat.id,cat.categoryName)"
+						class="btn btn-warning btn-lg btn-block" data-toggle="modal"
+						data-target="#productModal">select now</button>
+				</div>
+			</div>
+			<!-- SPACER-->
+		</div>
+		<div class="spacer"></div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="productModal" role="dialog">
+		<div class="container   modal-content">
+			<div class="modal-header">
+			
+				<h4 class="modal-title">
+				<button type="button" data-dismiss="modal" class="btn btn-danger ">Back <span class="glyphicon glyphicon-arrow-left"></span></button>
+			<button type="button btn-warning " class="close" data-dismiss="modal">&times;</button>		<strong>{{catName|uppercase}}</strong>
+				</h4>
+			</div>
+			<div class="table">
+
+				<div class="col-md-8" data-ng-repeat="pro in product">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel panel-default  panel--styled">
+								<div class="panel-body">
+									<div class="col-md-12 panelTop">
+										<div class="col-md-4">
+											<img class="img-responsive" ng-src="resources/images/menuImages/{{pro.pName}}.jpg"
+												alt="" />
+										</div>
+										<div class="col-md-8">
+											<h2>{{pro.description|capitalize }}</h2>
+											<p>Lorem ipsum dolor sit amet, altera propriae iudicabit
+												eos ne. Vel ut accusam tacimates, prima oratio ius ea. Et
+												duo alii verterem principes, te quo putent melius fabulas,
+												ei scripta eligendi appareat duo.</p>
+											<button class="btn  dropdown-toggle" type="button"
+												data-toggle="dropdown">
+												{{pro.vendor.vendorName}}<span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<u><b><h4>About Vendor</h4></b></u>
+												<li>Address:<strong>{{pro.vendor.addPojo.local}}</strong></li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{pro.vendor.addPojo.district}}</strong>
+												</li>
+												<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													&nbsp;<strong>{{pro.vendor.addPojo.state}}</strong>
+												</li>
+												<li>pincode:<strong>{{pro.vendor.addPojo.pincode}}</strong></li>
+
+											</ul>
+											<input type="text" data-ng-model="productQty"
+												placeholder="add no you want to add"
+												onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+										</div>
+
+									</div>
+
+									<div class="col-md-12 panelBottom">
+										<div class="col-md-4 text-center">
+											<button class="btn btn-lg btn-add-to-cart"
+												data-ng-pattern="onlyNumbers"
+												data-ng-click="addCart(pro.id, pro.description,pro.price,productQty)">
+												<span class="glyphicon glyphicon-shopping-cart"></span> Add
+												to Cart
+											</button>
+										</div>
+										<div class="col-md-4 text-left">
+											<h5>
+												Price <span class="itemPrice">Rs {{pro.price}}</span>
+											</h5>
+										</div>
+										<!-- <div class="col-md-4">
+										<div class="stars">
+											<div id="stars" class="star"></div>
+										</div>
+									</div> -->
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+
+				<span class="col-md-4" ng-if="cart.length>0"> <img
+					src="resources/images/foodcart.gif" ng-cloak width="70%" height="70%">
+					<a href="" data-ng-click="closeModal()" class="btn  btn-primary">
+						<span class="glyphicon glyphicon-inbox"></span>total <strong>{{cart.length}}
+					</strong> , waiting now check it out <span
+						class="glyphicon glyphicon-forward"></span>
+				</a>
+				</span>
+			</div>
+
+		</div>
+	</div>
+</div>

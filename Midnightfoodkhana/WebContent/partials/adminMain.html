@@ -1,0 +1,128 @@
+<!-- <div class="container">
+		<div data-ng-controller="UserController"
+			data-ng-init="loadCategories()">
+			<div class="jumbotron jumbotron-sm">
+
+				<div class="row">
+					<div class="col-sm-12 col-lg-12">
+						<h1 class="h1">
+
+							Welcome admin <small>{{user.userName}}</small>
+						</h1>
+					</div>
+
+				</div>
+
+				<div ng-if="categories.length>0">
+					<table class="table table-hover">
+						<thead style="background-color: lightslategrey;">Category	Names
+						</thead>
+						<tr data-ng-repeat="cat in categories ">
+							<td><a href=""></a> {{cat.categoryName| uppercase}}</td>
+							<td><a href=""></a> edit</td>
+							<td><a href=""></a> delete</td>
+						</tr>
+						<tr>
+							<a href=""></a> add category
+							</td>
+						</tr>
+
+
+
+					</table>
+
+				</div>
+
+
+
+				<div ng-if="products.length>0">
+					<table class="table table-hover">
+						<thead style="background-color: lightslategrey;">Product
+							Names
+						</thead>
+
+
+						<tr data-ng-repeat="pro in products ">
+							<td>{{pro.id}}</td>
+							<td>{{pro.pName}}</td>
+							<td>{{pro.price}}</td>
+							<td>{{pro.description}}</td>
+							<td>{{pro.vegOrNon}}</td>
+							<td>{{pro.categoryName}}</td>
+							<td>{{pro.vendor.id}}</td>
+						<tr>
+							Vendor
+							<td>{{pro.vendor.id}}</td>
+							<td>{{pro.vendor.vendorName}}</td>
+						<tr>
+							Vendor Address
+							<td>{{pro.vendor.addPojo}}</td>
+							<td>{{pro.vendor.local}}</td>
+							<td>{{pro.vendor.district}}</td>
+							<td>{{pro.vendor.pincode}}</td>
+						</tr>
+
+						</tr>
+						<td><a href=""></a> edit</td>
+
+
+						<td><a href=""></a> delete</td>
+						</tr>
+
+						<tr>
+							<a href=""></a> add product
+							</td>
+						</tr>
+
+
+
+					</table>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+		//catgory name---->list all category name in form of table---->each
+		row--->update/delete ----->add category button //each
+		category---->should be hyperlink---->resulting in list of products
+		each must have category id each product---->edit and delete add
+		product button
+
+Modal
+category
+
+	<div class="modal fade" id="productModal" role="dialog">
+		<div class="container   modal-content">
+			<div class="modal-header">
+			
+				<h4 class="modal-title">
+				<button type="button" data-dismiss="modal" class="btn btn-danger ">Back <span class="glyphicon glyphicon-arrow-left"></span></button>
+			<button type="button btn-warning " class="close" data-dismiss="modal">&times;</button>		<strong>{{catName|uppercase}}</strong>
+				</h4>
+			</div>
+
+
+				
+			</div>
+
+		</div>
+product
+	<div class="modal fade" id="productModal" role="dialog">
+		<div class="container   modal-content">
+			<div class="modal-header">
+			
+				<h4 class="modal-title">
+				<button type="button" data-dismiss="modal" class="btn btn-danger ">Back <span class="glyphicon glyphicon-arrow-left"></span></button>
+			<button type="button btn-warning " class="close" data-dismiss="modal">&times;</button>		<strong>{{catName|uppercase}}</strong>
+				</h4>
+			</div>
+
+
+				
+			</div>
+
+</div>
+	</div> -->
