@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>GymManagementSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>serve1</servlet-name>
+    <servlet-class>com.flp.ems.controller.ServletController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>serve1</servlet-name>
+    <url-pattern>/serve</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>com.flp.ems.listener.ServletCtxListener</listener-class>
+  </listener>
+</web-app>
