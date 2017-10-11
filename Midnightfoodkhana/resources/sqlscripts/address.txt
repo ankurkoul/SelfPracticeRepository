@@ -1,0 +1,11 @@
+insert into address values(1,'pune','nigdi','1000','maha');
+insert into address values(2,'delhi','new delhi','2000','delhi');
+
+
+insert into user values (1,'abcd@gmail.com','pass','user','abcd');
+insert into user values (2,'aaaa@gmail.com','pass2','user','aaaa');
+insert into user values (3,'admin@gmail.com','admin','admin','admin');
+
+insert into user_address values(1,1);
+insert into user_address values(1,2);
+

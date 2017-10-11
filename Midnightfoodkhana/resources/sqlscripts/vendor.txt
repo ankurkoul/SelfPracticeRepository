@@ -1,0 +1,5 @@
+insert into vendor values(1,'1000','1','mid rest1',1);
+insert into vendor values(2,'1000','2','mid rest2',2);
+insert into vendor values(3,'2000','1','night rest1',1);
+insert into vendor values(4,'3000','2','night rest2',2);
+

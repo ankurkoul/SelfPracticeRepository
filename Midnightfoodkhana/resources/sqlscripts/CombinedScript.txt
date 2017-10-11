@@ -1,0 +1,49 @@
+address
+insert into address values(1,'pune','nigdi','1000','maha');
+insert into address values(2,'delhi','new delhi','2000','delhi');
+
+
+insert into user values (1,'abcd@gmail.com','pass','user','abcd');
+insert into user values (2,'aaaa@gmail.com','pass2','user','aaaa');
+insert into user values (3,'admin@gmail.com','admin','admin','admin');
+
+insert into user_address values(1,1);
+insert into user_address values(1,2);
+
+
+insert into adminuser  values (1,'admin','admin');
+
+
+insert into category values(1,'biryani','Originating in Persia and popular in India and the Middle East, biryani can be made with chicken, seafood or meat, and can also be made as a vegetarian casserole. Biryani is normally made with basmati rice and flavored with cloves, cinnamon, cardamon, bay leaf, coriander, mint, ginger, garlic and onions');
+insert into category values (2,'pizza',
+		'Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven.The term was first recorded in the 10th  century,	The modern pizza was invented in Naples, Italy, and	the dish and its variants have since become popular	in many areas of the world');
+insert into category values(3,'thali','Rice or Roti is the usual main dish which occupies the central portion of the Thali, while the side dishes like vegetable curries and other aforementioned delicacies are lined circularly along the round Thali. Restaurants typically offer a choice of vegetarian or meat-based thalis.');
+insert into category values(4,'chinese','Chinese cuisine is an important part of Chinese culture, which includes cuisines originating from the diverse regions of China, as well as from Chinese people in other parts of the world. Because of Chinese diaspora, Chinese cuisine has influenced many other cuisines in Asia, and evolved into a new Chinese/American cuisine separate from that of China and the rest of Asia.');
+		
+insert into category values( 5,'wrap','The usual flatbreads are wheat-flour tortillas, lavash, or pita; the filling usually consists of cold sliced meat, poultry, or fish accompanied by shredded lettuce, diced tomato or pico de gallo, guacamole, sauteed mushrooms, bacon, grilled onions, cheese, and a sauce, such as ranch or honey mustard.');
+		
+insert into category values(6,'dessert',
+		'Dessert is a course that concludes a main meal. The course usually consists of sweet foods and beverages, such as dessert wine or liqueurs, but may include coffee, cheeses, nuts, or other savory items');
+		
+		
+		
+		
+		
+
+insert into product values(1,'veg biryani','1','vegbiryani',200,'veg',1,2);
+insert into product values(2,'chicken biryani','1','chickbiryani',300,'non',1,2);
+insert into product values(3,'chicken pizza','1','chickpizza',200,'non',2,1);
+insert into product values(4,'veg pizza','1','vegpizza',100,'veg',2,1);
+insert into product values(5,'veg thali','1','vegthali',50,'veg',3,3);
+insert into product values(6,'chicken thali','1','chickthali',110,'non',3,3);
+insert into product values(7,'veg noodles ','1','vnoodle',110,'veg',4,1);
+insert into product values(8,'chicken noodles ','1','cnoodle',110,'non',4,1);
+insert into product values(9,'veg wrap','1','vegwrap',50,'veg',5,4);
+insert into product values(10,'chicken wrap','1','chickwrap',110,'non',5,4);
+insert into product values(11,'cake ','1','cake',110,'veg',6,1);
+insert into product values(12,'ice cream ','1','ice',110,'veg',6,1);
+
+insert into vendor values(1,'1000','1','mid rest1',1);
+insert into vendor values(2,'1000','2','mid rest2',2);
+insert into vendor values(3,'2000','1','night rest1',1);
+insert into vendor values(4,'3000','2','night rest2',2);
